@@ -5,11 +5,15 @@ import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 
 export default {
+  components: {
+    AppHeader,
+    AppMain,
+  },
   data() {
     return {
       // message: 'Boolflix',
-      store: store,
       // query: 'Zoolander',
+      store: store,
     }
   },
   methods: {
@@ -24,12 +28,13 @@ export default {
         }
       }).then(res => {
         console.log(res.data.results)
+        store.moviesArray = res.data.results;
+        // store.displayCard = true;
       })
+
+
+      store.searchText = ''
     }
-  },
-  components: {
-    AppHeader,
-    AppMain,
   },
   // created() {
   //   console.log('created')

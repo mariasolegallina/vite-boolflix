@@ -17,7 +17,7 @@ export default {
         <button @click="$emit('performSearch')">
             Cerca
         </button>
-        <div>{{ store.searchText }}</div>
+        <!-- <div>{{ store.searchText }}</div> -->
     </div>
 </template>
 
