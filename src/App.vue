@@ -1,6 +1,8 @@
 <script>
-import { store } from './store.js'
+import { store } from './store.js';
 import axios from 'axios';
+import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
 
 export default {
   data() {
@@ -22,12 +24,17 @@ export default {
       axios.get('https://api.themoviedb.org/3/search/movie', {
         params: {
           api_key: this.store.API_KEY,
-          query: this.query
+          query: this.query,
+          language: 'it_IT',
         }
       }).then(res => {
         console.log(res.data.results)
       })
     }
+  },
+  components: {
+    AppHeader,
+    AppMain,
   },
   created() {
     console.log('created')
@@ -37,8 +44,8 @@ export default {
 </script>
 
 <template>
-  <input type="text" name="" id="">
-  <div>{{ message }}</div>
+  <AppHeader />
+  <AppMain />
 </template>
 
 <style lang="scss">
