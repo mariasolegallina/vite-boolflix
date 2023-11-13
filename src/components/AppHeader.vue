@@ -3,9 +3,8 @@ import { store } from '../store.js'
 
 export default {
     data() {
-
         return {
-            message: 'Cerca un film ',
+            searchText: '',
         };
     },
 }
@@ -13,8 +12,9 @@ export default {
 
 <template>
     <div class="container">
-        <span>{{ message }}</span>
-        <input type="text" name="" id="">
+        <input v-model="searchText" type="search" placeholder="cosa vuoi guardare?">
+        <button>Cerca</button>
+        <div>{{ searchText }}</div>
     </div>
 </template>
 
