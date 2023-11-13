@@ -1,9 +1,26 @@
 <script>
+import { store } from './store.js'
+import axios from 'axios';
+
 export default {
   data() {
     return {
-      message: 'Boolflix'
+      message: 'Boolflix',
+      store: store,
+      query: 'Zoolander',
     }
+  },
+  methods: {
+    fetchMovies() {
+      // soluzione 1
+      axios.get(`https://api.themoviedb.org/3/movie/550?api_key=${this.store.API_KEY}&query=${this.query}`)
+
+      // soluzione 2
+    }
+  },
+  created() {
+    console.log('created')
+    this.fetchMovies()
   }
 }
 </script>
