@@ -13,9 +13,20 @@ export default {
   methods: {
     fetchMovies() {
       // soluzione 1
-      axios.get(`https://api.themoviedb.org/3/movie/550?api_key=${this.store.API_KEY}&query=${this.query}`)
+      // axios.get(`https://api.themoviedb.org/3/movie/550?api_key=${this.store.API_KEY}&query=${this.query}`)
+      // .then(res => {
+      //   console.log(res.data.results)
+      // })
 
       // soluzione 2
+      axios.get('https://api.themoviedb.org/3/search/movie', {
+        params: {
+          api_key: this.store.API_KEY,
+          query: this.query
+        }
+      }).then(res => {
+        console.log(res.data.results)
+      })
     }
   },
   created() {
