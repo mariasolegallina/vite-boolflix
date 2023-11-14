@@ -26,6 +26,11 @@ export default {
             <h4 class="title">{{ item.title }}</h4>
             <h5 class="original-title">{{ item.original_title }}</h5>
 
+            <!-- vote -->
+            <div>
+                <font-awesome-icon v-for="n in Math.round(item.vote_average / 2)" :key="n" icon="fa-solid fa-star" />
+                <font-awesome-icon v-for="n in Math.round(5 - item.vote_average / 2)" :key="n" icon="fa-regular fa-star" />
+            </div>
         </div>
     </div>
 </template>
