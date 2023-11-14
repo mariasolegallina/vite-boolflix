@@ -23,8 +23,8 @@ export default {
 <style lang="scss" scoped>
 .app__main {
     .grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 40px;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
     }
 }
 </style>
