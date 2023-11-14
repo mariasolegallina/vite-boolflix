@@ -57,6 +57,13 @@ figure>img {
     align-items: center;
 }
 
+.app__main {
+    background-color: var(--main-view);
+    flex-grow: 1;
+    overflow: auto;
+    padding: 30px;
+}
+
 
 // .container {
 //     max-width: 100%;
