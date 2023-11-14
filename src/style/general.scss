@@ -28,8 +28,34 @@ figure>img {
     width: 100%;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 10px;
+// utility
+.row {
+    display: flex;
 }
+
+
+
+#app {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.app__header {
+    overflow: hidden;
+    background-color: black;
+    min-width: 100%;
+    min-height: 50px;
+    padding: 15px;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+// .container {
+//     max-width: 100%;
+//     margin: 0 auto;
+//     padding: 0 10px;
+// }

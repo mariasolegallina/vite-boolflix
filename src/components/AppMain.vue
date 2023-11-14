@@ -14,7 +14,6 @@ export default {
 }
 </script>
 <template>
-    <AppCard v-for="movie in store.moviesArray" :key="movie.id" :Title="movie.title"
-        :OriginalTitle="movie.original_title" />
+    <AppCard v-for="movie in store.moviesArray" :key="movie.id" :item="movie" />
 </template>
 <style></style>

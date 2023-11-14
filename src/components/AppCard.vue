@@ -8,17 +8,18 @@ export default {
         }
     },
     props: {
-        Title: String,
-        OriginalTitle: String,
-        OriginalLanguage: String,
+        item: Object
+        // Title: String,
+        // OriginalTitle: String,
+        // OriginalLanguage: String,
     }
 }
 </script>
 
 <template>
     <div>
-        <h4>{{ Title }}</h4>
-        <h5>{{ OriginalTitle }}</h5>
+        <h4>{{ item.title }}</h4>
+        <h5>{{ item.original_title }}</h5>
     </div>
 </template>
-<style></style>
+<style lang="scss" scoped></style>

@@ -11,14 +11,29 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <input v-model="store.searchText" @keyup.enter="$emit('performSearch')" type="search"
-            placeholder="cosa vuoi guardare?">
-        <button @click="$emit('performSearch')">
-            Cerca
-        </button>
-        <!-- <div>{{ store.searchText }}</div> -->
+    <div class="app__header row">
+        <div class="logo">
+            <h4>Boolflix</h4>
+        </div>
+        <div class="searchbar">
+            <input v-model="store.searchText" @keyup.enter="$emit('performSearch')" type="search"
+                placeholder="cosa vuoi guardare?">
+            <button @click="$emit('performSearch')">
+                Cerca
+            </button>
+        </div>
     </div>
 </template>
 
-<style></style>
+<style lang="scss" scoped>
+.app__header {
+    justify-content: space-between;
+}
+
+.logo {
+    h4 {
+        color: red;
+        text-transform: uppercase;
+    }
+}
+</style>
