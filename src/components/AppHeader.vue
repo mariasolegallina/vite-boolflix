@@ -28,12 +28,17 @@ export default {
 <style lang="scss" scoped>
 .app__header {
     justify-content: space-between;
-}
 
-.logo {
-    h4 {
-        color: red;
-        text-transform: uppercase;
+    .logo {
+        h4 {
+            color: red;
+            text-transform: uppercase;
+        }
     }
+
+    input {
+        margin-right: 5px;
+    }
+
 }
 </style>

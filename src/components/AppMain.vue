@@ -14,6 +14,17 @@ export default {
 }
 </script>
 <template>
-    <AppCard v-for="movie in store.moviesArray" :key="movie.id" :item="movie" />
+    <div class="app__main">
+        <div class="cards grid">
+            <AppCard v-for="movie in store.moviesArray" :key="movie.id" :item="movie" />
+        </div>
+    </div>
 </template>
-<style></style>
+<style lang="scss" scoped>
+.app__main {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+    }
+}
+</style>

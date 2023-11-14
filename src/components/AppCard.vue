@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-    <div>
+    <div class="card">
         <h4>{{ item.title }}</h4>
         <h5>{{ item.original_title }}</h5>
     </div>
